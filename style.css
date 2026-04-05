@@ -1,9 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     min-height: 100vh;
 }
 
 .gameArea {
-    margin: 160px auto;
+    margin: 160px auto 0 auto;
     height: 400px;
     width: 1000px;
     border: 2px solid black;
@@ -27,11 +32,14 @@ body {
     position: absolute;
     bottom: 0;
     left: 80%;
-    animation: move 2s linear infinite;
 }
 
 .player.jump {
     animation: jump 0.7s none;
+}
+
+.obstacle.move {
+    animation: move 2s linear infinite;
 }
 
 @keyframes jump {
@@ -56,4 +64,24 @@ body {
     100% {
         left: -100px;
     }
+}
+
+#btn {
+    background-color: aqua;
+    height: 50px;
+    width: 160px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    margin: 20px auto;
+}
+
+#p3 {
+    position: absolute;
+    font-size: 1.2rem;
+    background-color: rgb(251, 179, 91);
+}
+
+#p1,
+#p2 {
+    font-size: 1.6rem;
 }

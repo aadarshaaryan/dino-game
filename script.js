@@ -25,7 +25,7 @@ setInterval(() => {
     let playerBottom = parseInt(window.getComputedStyle(player).getPropertyValue('bottom'));
     let obstacleLeft = parseInt(window.getComputedStyle(obstacle).getPropertyValue('left'));
 
-    if (obstacleLeft < 200 && obstacleLeft > 150 && playerBottom < 80) {
+    if (obstacleLeft < 200 && obstacleLeft > 150 && playerBottom < 60) {
         alert("Game Over 💀 | click OK to restart");
     }
 }, 10);

@@ -8,18 +8,22 @@ body {
 }
 
 .gameArea {
-    margin: 160px auto 0 auto;
+    margin: 100px auto 0 auto;
     height: 400px;
     width: 1000px;
     border: 2px solid black;
     position: relative;
     overflow: hidden;
+    background: linear-gradient(to right,
+            #56ccf2,
+            #f2c94c,
+            #56ccf2);
+    background-size: 200% 100%;
 }
 
 .player {
     height: 40px;
     width: 40px;
-    border: 2px solid black;
     position: absolute;
     bottom: 0;
     left: 20%;
@@ -28,18 +32,13 @@ body {
 .obstacle {
     height: 60px;
     width: 40px;
-    border: 2px solid black;
     position: absolute;
     bottom: 0;
     left: 80%;
 }
 
 .player.jump {
-    animation: jump 0.7s none;
-}
-
-.obstacle.move {
-    animation: move 2s linear infinite;
+    animation: jump 0.7s ease-out none;
 }
 
 @keyframes jump {
@@ -84,4 +83,38 @@ body {
 #p1,
 #p2 {
     font-size: 1.6rem;
+}
+
+img {
+    height: 100%;
+}
+
+#p4 button {
+    margin: 0 4px;
+    width: 100px;
+    height: 30px;
+}
+
+.active {
+    background-color: red;
+    color: white;
+}
+
+.sp {
+    transition: 0.1s;
+}
+
+#p4 {
+    margin-top: 27px;
+    font-size: 30px;
+}
+
+@keyframes bgMove {
+    from {
+        background-position: -200% 0;
+    }
+
+    to {
+        background-position: 0% 0;
+    }
 }
